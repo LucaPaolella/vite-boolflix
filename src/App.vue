@@ -1,9 +1,22 @@
-<script setup>
-import { store } from './store';
+<script>
+//import { store } from './store';
+import AppMain from './components/AppMain.vue';
 
+export default {
+  name: 'App',
+  components: {
+    AppHeader,
+    AppMain,
+    AppFooter
+  },
+}
 
 </script>
 
-<template></template>
+<template>
+  <AppMain />
+</template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "./assets/main.scss";
+</style>
