@@ -44,7 +44,7 @@ export default {
   <main>
     <ul>
       <li v-for="movie in store.movies">
-        <cardApp :info="movies" />
+        <cardApp :info="movie" />
       </li>
     </ul>
   </main>
