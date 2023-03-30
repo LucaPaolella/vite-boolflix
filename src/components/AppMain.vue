@@ -1,17 +1,17 @@
 <script>
 export default {
-    name: 'Main',
-    /*components: {
-        CharacterSearch,
-        CharacterList
-    },*/
-    methods: {
-        handleSearch() {
-            console.log('ho ascoltato questo evento');
-            this.$emit('qualcosa');
-        }
+    name: "Card",
+    props: {
+        info: Object
     }
 }
 </script>
 
-<template></template>
+<template>
+    <article>
+        <h3>{{ ifo.title }}</h3>
+        <h4>{{ info.original_title }}</h4>
+        <div>{{ info.original.language }}</div>
+        <div>{{ info.vote_average }}</div>
+    </article>
+</template>

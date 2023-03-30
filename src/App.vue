@@ -15,32 +15,33 @@ export default {
   },
   methods: {
     search() {
-      axios.get('https://api.themoviedb.org/3/movie/550?api_key=f18ce2abcd2d9bd622cfeffbe75a5d26', {
+      console.log('fai la ricerca');
+      console.log(this.store.searchkey);
+
+      axios.get(this.store.config.urlMovie, {
         params: {
-          name: store.searchKey,
-          status: store.searchStatus
+          api_key: this.store.config.apiKey,
+          language: this.store.config.defaultLang,
+          query: this.store.searchKey
         }
+      }).then((response) => {
+        console.log(response);
+        this.store.movies = response.data.results;
       })
-        .then((response) => {
-          console.log(response);
-          this.store.film = response.data.results;
-          this.store.filmFound = response.data.results.length;
-        })
-        .catch((error) => {
-          console.log(error);
-          this.store.characters = [];
-          this.store.charactersFound = 0;
-        })
+
     }
-  },
-  created() {
-    this.search();
   }
 }
 
 </script>
 
 <template>
+  <div>
+    <input type="text" placeholder="Cerca Film" v-model="store.searchKey">
+    <button @click="search">Cerca</button>
+  </div>
+
+
   <AppMain @qualcosa="search" />
 </template>
 
