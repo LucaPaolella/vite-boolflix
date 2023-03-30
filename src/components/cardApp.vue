@@ -20,6 +20,9 @@ export default {
                 default:
                     return this.info.original_language;
             }
+        },
+        getVote() {
+            return Math.ceil(this.info.vote_average / 2)
         }
     }
 }
@@ -29,10 +32,18 @@ export default {
     <article>
         <h3>{{ info.title }}</h3>
         <h4>{{ info.original_title }}</h4>
-        <div>{{ getLanguage }}</div>
+        <!--<div>{{ getLanguage }}</div>-->
         <country-flag :country="getLanguage" size="small" />
-        <div>{{ info.vote_average }}</div>
+        <!--<div>{{ getVote }}</div>-->
+        <font-awesome-icon icon="fa-solid fa-star" v-for="n in getVote" />
+        <font-awesome-icon icon="fa-regular fa-star" v-for="n in 5 - getVote" />
 
     </article>
 </template>
+
+<style>
+.fa-star {
+    color: orange;
+}
+</style>
 
