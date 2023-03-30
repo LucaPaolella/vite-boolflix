@@ -1,12 +1,12 @@
 <script>
 import axios from 'axios';
 import { store } from './store';
-import AppMain from './components/AppMain.vue';
+import cardApp from './components/cardApp.vue';
 
 export default {
   name: 'App',
   components: {
-    AppMain,
+    cardApp,
   },
   data() {
     return {
@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     search() {
-      console.log('fai la ricerca');
+      //console.log('fai la ricerca');
       console.log(this.store.searchkey);
 
       axios.get(this.store.config.urlMovie, {
@@ -36,13 +36,18 @@ export default {
 </script>
 
 <template>
-  <div>
+  <header>
     <input type="text" placeholder="Cerca Film" v-model="store.searchKey">
     <button @click="search">Cerca</button>
-  </div>
+  </header>
 
-
-  <AppMain @qualcosa="search" />
+  <main>
+    <ul>
+      <li v-for="movie in store.movies">
+        <cardApp :info="movies" />
+      </li>
+    </ul>
+  </main>
 </template>
 
 <style lang="scss" scoped>
