@@ -1,17 +1,17 @@
 <script>
-export default {
-    name: "Card",
-    props: {
-        info: Object
-    }
-}
+//export default {
+//    name: "Card",
+//    props: {
+//        info: Object
+//    }
+//}
 </script>
 
 <template>
-    <article>
-        <h3>{{ ifo.title }}</h3>
-        <h4>{{ info.original_title }}</h4>
-        <div>{{ info.original.language }}</div>
-        <div>{{ info.vote_average }}</div>
-    </article>
+    <!--<article>
+            <h3>{{ info.title }}</h3>
+            <h4>{{ info.original_title }}</h4>
+            <div>{{ info.original.language }}</div>
+            <div>{{ info.vote_average }}</div>
+        </article>-->
 </template>
