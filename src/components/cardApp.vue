@@ -7,7 +7,8 @@ export default {
         CountryFlag
     },
     props: {
-        info: Object
+        info: Object,
+        //title: string
     },
     computed: {
         getLanguage() {
@@ -30,8 +31,8 @@ export default {
 
 <template>
     <article>
-        <h3>{{ info.title }}</h3>
-        <h4>{{ info.original_title }}</h4>
+        <h3>{{ info.title || info.name }}</h3>
+        <h4>{{ info.original_title || info.original_name }}</h4>
         <!--<div>{{ getLanguage }}</div>-->
         <country-flag :country="getLanguage" size="small" />
         <!--<div>{{ getVote }}</div>-->
