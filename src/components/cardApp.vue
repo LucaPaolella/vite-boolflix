@@ -37,22 +37,32 @@ export default {
 </script>
 
 <template>
-    <article>
-        <h3>{{ info.title || info.name }}</h3>
-        <h4>{{ info.original_title || info.original_name }}</h4>
-        <img :src="getImageUrl(info.poster_path)" alt="">
-        <!--<div>{{ getLanguage }}</div>-->
-        <country-flag :country="getLanguage" size="small" />
-        <!--<div>{{ getVote }}</div>-->
-        <font-awesome-icon icon="fa-solid fa-star" v-for="n in getVote" />
-        <font-awesome-icon icon="fa-regular fa-star" v-for="n in 5 - getVote" />
+    <article class="card flex">
+
+        <div class="container-img flex">
+            <div class="description-container">
+                <p class="description">{{ info.overview }}</p>
+            </div>
+            <img :src="getImageUrl(info.poster_path)" alt="">
+        </div>
+
+        <div class="container-info">
+            <a href="#">
+                <h3>{{ info.title || info.name }}</h3>
+            </a>
+            <a href="#">
+                <h4>{{ info.original_title || info.original_name }}</h4>
+            </a>
+        </div>
+
+        <div>
+            <country-flag :country="getLanguage" size="small" />
+            <font-awesome-icon icon="fa-solid fa-star" v-for="n in getVote" />
+            <font-awesome-icon icon="fa-regular fa-star" v-for="n in 5 - getVote" />
+        </div>
 
     </article>
 </template>
 
-<style>
-.fa-star {
-    color: orange;
-}
-</style>
+<style></style>
 

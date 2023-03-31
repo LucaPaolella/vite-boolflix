@@ -1,0 +1,43 @@
+.fa-star {
+    color: orange;
+}
+
+.card {
+    border: 1px solid black;
+    margin: auto;
+    padding: auto;
+
+}
+
+main {
+    background-image: url(../../../public/img/jolly-roger.jpg);
+    color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+article {
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.container-info>a {
+    color: white;
+}
+
+.container-img>img {
+    z-index: 1;
+}
+
+.description {
+    font-size: 12px;
+    border: 1px solid red;
+    padding: 5 px;
+    width: 200px;
+    height: 300px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: black;
+    display: none;
+}

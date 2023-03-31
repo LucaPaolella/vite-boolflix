@@ -1,0 +1,8 @@
+.container-img:hover .description {
+    z-index: 10;
+    display: block;
+}
+
+.container-img:hover .container-img>img {
+    display: none;
+}

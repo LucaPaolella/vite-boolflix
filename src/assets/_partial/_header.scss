@@ -1,0 +1,31 @@
+header {
+    height: 100px;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+h1 {
+    color: red;
+    text-decoration: line-through;
+}
+
+.container-titolo>h2 {
+    color: red;
+    padding-left: 10px;
+}
+
+.container-titolo {
+    align-items: center;
+}
+
+
+.container-search>button {
+    margin-left: 10px;
+    border: 1px solid white;
+    color: red;
+    padding: 10px;
+    border-radius: 20%;
+    background-color: black;
+}

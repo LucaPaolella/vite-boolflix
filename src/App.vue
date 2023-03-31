@@ -53,19 +53,20 @@ export default {
 </script>
 
 <template>
-  <header>
-    <input type="text" placeholder="Cerca" v-model="store.searchKey">
-    <button @click="search">Cerca</button>
+  <header class="flex">
+
+    <div class="container-titolo flex">
+      <h1>BOOLFLIX</h1>
+      <h2>a PirateStreaming project</h2>
+    </div>
+
+    <div class="container-search">
+      <input type="text" placeholder="Cerca" v-model="store.searchKey">
+      <button @click="search">Avvia la ricerca</button>
+    </div>
   </header>
 
   <main>
-
-    <!--<h2>FILM</h2>
-            <ul>
-              <li v-for="movie in store.movies">
-                <cardApp :info="movie" />
-              </li>
-            </ul>-->
 
     <h2>CERCA</h2>
     <ul>
@@ -73,6 +74,7 @@ export default {
         <cardApp :info="result" />
       </li>
     </ul>
+
   </main>
 </template>
 
