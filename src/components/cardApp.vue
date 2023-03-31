@@ -8,7 +8,6 @@ export default {
     },
     props: {
         info: Object,
-        //title: string
     },
     computed: {
         getLanguage() {
@@ -25,6 +24,14 @@ export default {
         getVote() {
             return Math.ceil(this.info.vote_average / 2)
         }
+    },
+    methods: {
+        getImageUrl(path) {
+            if (!path) {
+                return 'https://via.placeholder.com/150x225?text=No+Image';
+            }
+            return `https://image.tmdb.org/t/p/w200${path}`;
+        }
     }
 }
 </script>
@@ -33,6 +40,7 @@ export default {
     <article>
         <h3>{{ info.title || info.name }}</h3>
         <h4>{{ info.original_title || info.original_name }}</h4>
+        <img :src="getImageUrl(info.poster_path)" alt="">
         <!--<div>{{ getLanguage }}</div>-->
         <country-flag :country="getLanguage" size="small" />
         <!--<div>{{ getVote }}</div>-->
