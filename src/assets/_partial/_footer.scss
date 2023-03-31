@@ -1,0 +1,17 @@
+footer {
+    justify-content: center;
+}
+
+.pubblicità {
+    justify-content: center;
+    position: fixed;
+    background-color: white;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    border: 3px solid red;
+    z-index: 3;
+    padding: 30px;
+    height: 100px;
+}

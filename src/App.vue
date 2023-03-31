@@ -68,14 +68,22 @@ export default {
 
   <main>
 
-    <h2>CERCA</h2>
-    <ul>
-      <li v-for="result in results">
-        <cardApp :info="result" />
-      </li>
-    </ul>
+    <div class="container-main">
+      <ul>
+        <li v-for="result in results">
+          <cardApp :info="result" />
+        </li>
+      </ul>
+    </div>
+
 
   </main>
+
+  <footer class="flex">
+    <div class="pubblicità flex">
+      <h2>Pubblicità</h2>
+    </div>
+  </footer>
 </template>
 
 <style lang="scss" scoped>
