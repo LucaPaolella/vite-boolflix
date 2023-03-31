@@ -31,6 +31,12 @@ export default {
                 return 'https://via.placeholder.com/150x225?text=No+Image';
             }
             return `https://image.tmdb.org/t/p/w200${path}`;
+        },
+
+        //publicità
+
+        mostraAlert() {
+            alert("pubblicità");
         }
     }
 }
@@ -47,7 +53,7 @@ export default {
         </div>
 
         <div class="container-info">
-            <a href="#">
+            <a href="#" @click="mostraAlert">
                 <h3>{{ info.title || info.name }}</h3>
             </a>
             <a href="#">

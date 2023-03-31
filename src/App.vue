@@ -3,6 +3,8 @@ import axios from 'axios';
 import { store } from './store';
 import cardApp from './components/cardApp.vue';
 
+alert("pubblicità");
+
 export default {
   name: 'App',
   components: {
@@ -41,7 +43,9 @@ export default {
         console.log(responseTv);
         this.store.tv = responseTv.data.results;
       })
-    }
+    },
+
+
   },
   computed: {
     results() {
