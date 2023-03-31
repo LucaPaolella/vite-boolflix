@@ -14,6 +14,8 @@ main {
     color: red;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-y: auto;
+    min-height: calc(100vh - 100px);
 }
 
 article {
